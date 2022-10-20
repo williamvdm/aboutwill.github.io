@@ -1,0 +1,28 @@
+# Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^aboutwill.nl[nc]
+RewriteRule ^(.*)$ http://www.aboutwill.nl/$1 [r=301,nc]
+
+# Caching schema
+<FilesMatch "\.(jpg|css)$">
+Header set Cache-Control "max-age=1800"
+</FilesMatch>
+
+# Change default directory page
+DirectoryIndex index.html
+
+# Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Prevent directory listings
+Options All -Indexes
+
+# Rewriting
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

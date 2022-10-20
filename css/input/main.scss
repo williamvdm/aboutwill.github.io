@@ -1,0 +1,18 @@
+@import "font";
+
+$font-stack: Helvetica, sans-serif;
+
+body {
+  font: 100% $font-stack;
+  background-color: white;
+  margin: 2rem;
+
+}
+
+.pagetitle {
+  text-align: center;
+  font-size: 10rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 4rem;
+  }
+}
