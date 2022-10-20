@@ -13,22 +13,31 @@ body {
 }
 
 header {
-  padding: 1rem;
-  margin: 0;
-
-  .logo {
-    width: 25px;
-
+  .nav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding-inline-start: 0px;
+    list-style-type: none;
   }
-  .pagetitle {
-    display: inline-block;
-    text-align: left;
-    font-size: 1.5em;
+  .nav a {
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
     color: $dark;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+
     @media only screen and (max-width: 600px) {
-      text-align: center;
-      font-size: 1rem;
+      
     }
+    }
+
+  .nav a:hover {
+    background-color: $dark;
+    color: $light;
   }
 }
 

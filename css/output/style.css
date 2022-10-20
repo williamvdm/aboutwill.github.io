@@ -11,24 +11,26 @@ body {
   background-color: #EBECF4;
 }
 
-header {
-  padding: 1rem;
-  margin: 0;
+header .nav {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding-inline-start: 0px;
+  list-style-type: none;
 }
-header .logo {
-  width: 25px;
-}
-header .pagetitle {
-  display: inline-block;
-  text-align: left;
-  font-size: 1.5em;
+header .nav a {
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
   color: #434655;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
 }
-@media only screen and (max-width: 600px) {
-  header .pagetitle {
-    text-align: center;
-    font-size: 1rem;
-  }
+header .nav a:hover {
+  background-color: #434655;
+  color: #EBECF4;
 }
 
 /*# sourceMappingURL=style.css.map */
