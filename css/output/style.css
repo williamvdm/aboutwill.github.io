@@ -8,17 +8,26 @@
 }
 body {
   font: 100% Helvetica, sans-serif;
-  background-color: white;
-  margin: 2rem;
+  background-color: #EBECF4;
 }
 
-.pagetitle {
-  text-align: center;
-  font-size: 10rem;
+header {
+  padding: 1rem;
+  margin: 0;
+}
+header .logo {
+  width: 25px;
+}
+header .pagetitle {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.5em;
+  color: #434655;
 }
 @media only screen and (max-width: 600px) {
-  .pagetitle {
-    font-size: 4rem;
+  header .pagetitle {
+    text-align: center;
+    font-size: 1rem;
   }
 }
 

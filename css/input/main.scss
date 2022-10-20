@@ -2,17 +2,33 @@
 
 $font-stack: Helvetica, sans-serif;
 
+$light: #EBECF4;
+$medium: #A3A9CE;
+$dark: #434655;
+
 body {
   font: 100% $font-stack;
-  background-color: white;
-  margin: 2rem;
+  background-color: $light;
 
 }
 
-.pagetitle {
-  text-align: center;
-  font-size: 10rem;
-  @media only screen and (max-width: 600px) {
-    font-size: 4rem;
+header {
+  padding: 1rem;
+  margin: 0;
+
+  .logo {
+    width: 25px;
+
+  }
+  .pagetitle {
+    display: inline-block;
+    text-align: left;
+    font-size: 1.5em;
+    color: $dark;
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
 }
+
