@@ -7,7 +7,15 @@ $light: #EBECF4;
 $medium: #A3A9CE;
 $dark: #434655;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
   font: 100% $font-stack;
   background-color: $light;
 
@@ -24,7 +32,6 @@ header {
   }
   .nav a {
     margin: 10px;
-    font-size: 1em;
     border-radius: 5px;
     text-align: center;
     color: $dark;
