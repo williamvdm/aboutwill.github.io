@@ -39,8 +39,6 @@ body .head .me {
   margin-bottom: 20px;
   border: 8px solid rgb(18, 24, 38);
   outline: 4px solid rgb(0, 198, 190);
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
 }
 body .head h3 {
   text-align: center;
