@@ -6,50 +6,73 @@
   font-family: Helvetica Bold;
   src: url("/font/helveticabold.ttf");
 }
-@media screen and (max-width: 600px) {
-  .nav-wrapper {
-    width: 100%;
-    height: 5rem;
-    margin: 0 auto;
-    padding: 10px;
-  }
-  .nav-wrapper .logo {
-    float: left;
-  }
-}
 * {
   margin: 0;
   padding: 0;
 }
 
+@media screen and (max-width: 600px) {
+  .me {
+    display: block;
+    border-radius: 100%;
+    width: 15vw;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 body {
   font: 100% Helvetica, sans-serif;
   background-color: rgb(18, 24, 38);
-}
-body .nav-wrapper {
-  width: 40%;
-  height: 5rem;
+  color: white;
   margin: 0 auto;
-  padding: 20px;
+  width: 30rem;
 }
-body .nav-wrapper .logo {
-  width: 4rem;
-  float: left;
+body .head .me {
+  display: block;
+  border-radius: 100%;
+  width: 10vw;
+  min-width: 200px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: 8px solid rgb(18, 24, 38);
+  outline: 4px solid rgb(0, 198, 190);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
 }
-body .nav-wrapper .nav {
-  float: right;
+body .head h3 {
+  text-align: center;
+}
+body .head h4 {
+  text-align: center;
+  font-weight: normal;
+}
+body .head .socials {
   display: inline;
+  text-align: center;
+  padding: 10px;
 }
-body .nav-wrapper .nav li {
+body .head .socials ul li {
   display: inline-block;
-  padding: 18px;
+  margin: 5px;
 }
-body .nav-wrapper .nav li a {
-  color: rgb(255, 255, 255);
+body .head .head-button {
+  width: 15rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid rgb(0, 198, 190);
+  border-radius: 100px;
+  color: rgb(0, 198, 190);
   text-decoration: none;
 }
-body .nav-wrapper .nav li .mode-changer {
-  width: 30px;
+body .head .head-button:hover {
+  color: rgb(18, 24, 38);
+  background-color: rgb(0, 198, 190);
 }
 
 /*# sourceMappingURL=style.css.map */
