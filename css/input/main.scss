@@ -3,46 +3,54 @@
 
 $font-stack: Helvetica, sans-serif;
 
-$light: #EBECF4;
-$medium: #A3A9CE;
-$dark: #434655;
+$light: rgb(255,255,255);
+$medium: rgb(0,198,190);
+$dark: rgb(18,24,38);
 
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0;
   font: 100% $font-stack;
-  background-color: $light;
+  background-color: $dark;
 
+  .nav-wrapper {
+    width: 40%;
+    height: 5rem;
+    margin: 0 auto;
+    padding: 20px;
+
+    .logo {
+      width: 4rem;
+      float: left;
+    }
+
+    .nav {
+      float: right;
+      display: inline;
+
+      li {
+        display: inline-block;
+        padding: 18px;
+
+        a {
+          color: $light;
+          text-decoration: none;
+        }
+
+        .mode-changer {
+          width: 30px;
+        }
+
+      }
+    }
+
+  }
 }
 
-header {
-  .nav {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    padding-inline-start: 0px;
-    list-style-type: none;
-  }
-  .nav a {
-    margin: 10px;
-    border-radius: 5px;
-    text-align: center;
-    color: $dark;
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-  }
 
-  .nav a:hover {
-    background-color: $dark;
-    color: $light;
-  }
-}
+
 
