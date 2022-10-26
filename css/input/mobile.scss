@@ -1,0 +1,43 @@
+$white: rgb(255, 255, 255);
+$milkpunch: rgb(255,247,214);
+$robinseggblue: rgb(0, 198, 190);
+$ebony: rgb(17,24,39);
+$mirage: rgb(30,41,59);
+$border: rgb(55,65,81);
+
+@media screen and (max-width: 600px) {
+  main .content {
+    width: 90%;
+    border-radius: 0px;
+    padding: 20px 0px 0px 0px;
+
+    .col-about {
+      margin-top: 10px;
+      h1 {
+        font-size: 2em;
+        text-align: center;
+      }
+    }
+
+    .col-projects {
+      display: flex;
+      align-content: space-between;
+      flex-direction: column;
+      align-items:center;
+    }
+  }
+
+  main .head {
+    .socials {
+      ul {
+        li {
+          a {
+            img {
+              width: 3em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
