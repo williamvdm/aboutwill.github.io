@@ -4,22 +4,31 @@
 $font-stack: Helvetica, sans-serif;
 
 $white: rgb(255, 255, 255);
-$milkpunch: rgb(255,247,214);
-$robinseggblue: rgb(0,198,189);
-$ebony: rgb(17,24,39);
-$mirage: rgb(30,41,59);
-$border: rgb(55,65,81);
+$milkpunch: rgb(255, 247, 214);
+$robinseggblue: rgb(0, 198, 189);
+$ebony: rgb(17, 24, 39);
+$mirage: rgb(30, 41, 59);
+$border: rgb(55, 65, 81);
 
 @mixin columns {
-  background-color: $mirage;
-  border-radius: 10px;
-  border: 1px solid $border;
-  margin: 10px;
-  padding: 15px;
+  margin: 0 auto;
+  width: 100%;
   h3 {
     text-align: center;
   }
 }
+
+@mixin col-content {
+  .col-content {
+    background-color: $mirage;
+    border: 1px solid $border;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 100% / 3;
+    padding: 15px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,42 +40,48 @@ body {
   background-color: $ebony;
   color: white;
 
-.head {
-  display: block;
-  padding-top: 75px;
-  //head content
-  .me {
+  .head {
     display: block;
-    border-radius: 100%;
-    width: 10vw;
-    min-width: 200px;
-    margin: 0px auto 10px auto;
-    border: 8px solid $ebony;
-    outline: 2px solid $robinseggblue;
-  }
-  .socials {
-    display: inline;
-    text-align: center;
-    ul {
-      li {
-        display: inline-block;
-        margin: 5px;
-        a {
-          img {
-            width: 2em;
+    padding-top: 75px;
+    //head content
+    .me {
+      display: block;
+      border-radius: 100%;
+      width: 10vw;
+      min-width: 200px;
+      margin: 0px auto 10px auto;
+      border: 8px solid $ebony;
+      outline: 2px solid $robinseggblue;
+    }
+
+    .socials {
+      display: inline;
+      text-align: center;
+
+      ul {
+        li {
+          display: inline-block;
+          margin: 5px;
+
+          a {
+            img {
+              width: 2em;
+            }
           }
         }
       }
     }
+
+    h3 {
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+      font-weight: normal;
+    }
   }
-  h3 {
-    text-align: center;
-  }
-  h4 {
-    text-align: center;
-    font-weight: normal;
-  }
-}
+
   //page content
   .content {
     margin: 0 auto;
@@ -76,6 +91,7 @@ body {
     //about column
     .col-about {
       margin-top: 40px;
+
       h1 {
         font-size: 3em;
       }
@@ -89,17 +105,53 @@ body {
 
       .col-1 {
         @include columns;
+        @include col-content;
+        padding: 15px;
+
+        .project-image {
+          width: 100%;
+          height: 250px;
+          border-top-right-radius: 25px;
+          border-top-left-radius: 25px;
+          background-image: url("../../assets/images/project-ftsf.jpg");
+
+        }
+        height: 200px;
       }
+
       .col-2 {
         @include columns;
+        @include col-content;
+        padding: 15px;
+
+        .project-image {
+          width: 100%;
+          height: 250px;
+          border-top-right-radius: 25px;
+          border-top-left-radius: 25px;
+          background-image: url("../../assets/images/project-webshop.jpg");
+
+        }
+
+        height: 200px;
       }
+
       .col-3 {
         @include columns;
-      }
-    }
+        @include col-content;
+        padding: 15px;
 
-    .col-footer {
-      @include columns();
+        .project-image {
+          width: 100%;
+          height: 250px;
+          border-top-right-radius: 25px;
+          border-top-left-radius: 25px;
+          background-image: url("../../assets/images/project-codepamoja.jpg");
+
+        }
+
+        height: 200px;
+      }
     }
   }
 }

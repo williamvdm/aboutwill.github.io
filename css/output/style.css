@@ -80,44 +80,76 @@ body .content .col-projects {
   margin-top: 30px;
 }
 body .content .col-projects .col-1 {
-  background-color: rgb(30, 41, 59);
-  border-radius: 10px;
-  border: 1px solid rgb(55, 65, 81);
-  margin: 10px;
+  margin: 0 auto;
+  width: 100%;
   padding: 15px;
+  height: 200px;
 }
 body .content .col-projects .col-1 h3 {
   text-align: center;
 }
-body .content .col-projects .col-2 {
+body .content .col-projects .col-1 .col-content {
   background-color: rgb(30, 41, 59);
-  border-radius: 10px;
   border: 1px solid rgb(55, 65, 81);
-  margin: 10px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 100%/3;
   padding: 15px;
+}
+body .content .col-projects .col-1 .project-image {
+  width: 100%;
+  height: 250px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-image: url("../../assets/images/project-ftsf.jpg");
+}
+body .content .col-projects .col-2 {
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px;
+  height: 200px;
 }
 body .content .col-projects .col-2 h3 {
   text-align: center;
 }
-body .content .col-projects .col-3 {
+body .content .col-projects .col-2 .col-content {
   background-color: rgb(30, 41, 59);
-  border-radius: 10px;
   border: 1px solid rgb(55, 65, 81);
-  margin: 10px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 100%/3;
   padding: 15px;
+}
+body .content .col-projects .col-2 .project-image {
+  width: 100%;
+  height: 250px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-image: url("../../assets/images/project-webshop.jpg");
+}
+body .content .col-projects .col-3 {
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px;
+  height: 200px;
 }
 body .content .col-projects .col-3 h3 {
   text-align: center;
 }
-body .content .col-footer {
+body .content .col-projects .col-3 .col-content {
   background-color: rgb(30, 41, 59);
-  border-radius: 10px;
   border: 1px solid rgb(55, 65, 81);
-  margin: 10px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 100%/3;
   padding: 15px;
 }
-body .content .col-footer h3 {
-  text-align: center;
+body .content .col-projects .col-3 .project-image {
+  width: 100%;
+  height: 250px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-image: url("../../assets/images/project-codepamoja.jpg");
 }
 
 @media screen and (max-width: 600px) {
@@ -137,9 +169,17 @@ body .content .col-footer h3 {
     display: flex;
     align-content: space-between;
     flex-direction: column;
-    align-items: center;
   }
-  main .head .socials ul li a img {
+  main .content .col-projects .col-1 {
+    padding: 0px 0px 0px 0px;
+  }
+  main .content .col-projects .col-2 {
+    padding: 150px 0px 0px 0px;
+  }
+  main .content .col-projects .col-3 {
+    padding: 150px 0px 0px 0px;
+  }
+  main .head .socials .socials-icon {
     width: 3em;
   }
 }

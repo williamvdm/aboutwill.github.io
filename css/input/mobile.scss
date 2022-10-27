@@ -5,6 +5,10 @@ $ebony: rgb(17,24,39);
 $mirage: rgb(30,41,59);
 $border: rgb(55,65,81);
 
+@mixin columns {
+  padding-bottom: 150px;
+}
+
 @media screen and (max-width: 600px) {
   main .content {
     width: 90%;
@@ -23,20 +27,23 @@ $border: rgb(55,65,81);
       display: flex;
       align-content: space-between;
       flex-direction: column;
-      align-items:center;
+
+      .col-1 {
+        padding: 0px 0px 0px 0px;
+      }
+      .col-2 {
+        padding: 150px 0px 0px 0px;
+      }
+      .col-3 {
+        padding: 150px 0px 0px 0px;
+      }
     }
   }
 
   main .head {
     .socials {
-      ul {
-        li {
-          a {
-            img {
-              width: 3em;
-            }
-          }
-        }
+      .socials-icon {
+        width: 3em;
       }
     }
   }
