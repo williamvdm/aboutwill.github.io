@@ -1,41 +1,44 @@
 .one {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
   background: url('../../assets/images/project-ftsf.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  transition: all .2s ease-in-out;
 }
 
 .two {
+  border: 1px solid #efefefef;
+  background: url('../../assets/images/project-competa.jpg');
+  background-size: cover;
   width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url('../../assets/images/project-ftsf.jpg');
+  height: 300px;
+  transition: all .2s ease-in-out;
 }
-
-.three {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url('../../assets/images/project-ftsf.jpg');
-}
-
-.four {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url('../../assets/images/project-ftsf.jpg');
-}
-
-.five {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url('../../assets/images/project-ftsf.jpg');
-}
-
-.six {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url('../../assets/images/project-ftsf.jpg');
-}
+//
+//.three {
+//  width: 100%;
+//  height: 100%;
+//  background-size: contain;
+//  background: url('../../assets/images/project-ftsf.jpg');
+//}
+//
+//.four {
+//  width: 100%;
+//  height: 100%;
+//  background-size: contain;
+//  background: url('../../assets/images/project-ftsf.jpg');
+//}
+//
+//.five {
+//  width: 100%;
+//  height: 100%;
+//  background-size: contain;
+//  background: url('../../assets/images/project-ftsf.jpg');
+//}
+//
+//.six {
+//  width: 100%;
+//  height: 100%;
+//  background-size: contain;
+//  background: url('../../assets/images/project-ftsf.jpg');
+//}

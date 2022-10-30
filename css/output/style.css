@@ -154,7 +154,7 @@ main .container .projects {
   margin-top: 100px;
 }
 main .container .projects h2 {
-  margin-top: 100px;
+  text-align: center;
 }
 main .container .projects .projects-main {
   display: flex;
@@ -174,52 +174,32 @@ main .container .projects .projects-main .wrapper {
   transition: all 0.2s ease-in-out;
 }
 main .container .projects .projects-main .wrapper .one {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
   background: url("../../assets/images/project-ftsf.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  transition: all 0.2s ease-in-out;
 }
 main .container .projects .projects-main .wrapper .two {
+  border: 1px solid rgba(239, 239, 239, 0.937254902);
+  background: url("../../assets/images/project-competa.jpg");
+  background-size: cover;
   width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url("../../assets/images/project-ftsf.jpg");
-}
-main .container .projects .projects-main .wrapper .three {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url("../../assets/images/project-ftsf.jpg");
-}
-main .container .projects .projects-main .wrapper .four {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url("../../assets/images/project-ftsf.jpg");
-}
-main .container .projects .projects-main .wrapper .five {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url("../../assets/images/project-ftsf.jpg");
-}
-main .container .projects .projects-main .wrapper .six {
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url("../../assets/images/project-ftsf.jpg");
+  height: 300px;
+  transition: all 0.2s ease-in-out;
 }
 main .container .projects .projects-main .wrapper .item-title {
   position: relative;
   text-align: center;
   padding: 5px;
-  font-weight: bold;
+  margin: 0px auto 10px auto;
+  font-size: 24px;
 }
 main .container .projects .projects-main .wrapper .background {
   border-radius: 25px;
 }
 main .container .projects .projects-main .wrapper:hover > .background {
-  filter: blur(5px);
+  filter: grayscale(90%) blur(1px);
   transition: 0.4s ease-in-out;
 }
 main .container .projects .projects-main .wrapper:hover > .demo-button {
@@ -228,7 +208,69 @@ main .container .projects .projects-main .wrapper:hover > .demo-button {
   display: flex;
   z-index: 0;
   text-align: center;
+  color: white;
   transition: 0.4s ease-in-out;
+}
+main .container .projects .projects-main .wrapper:hover > .tags {
+  display: flex;
+}
+main .container .projects .projects-main .wrapper .tags {
+  position: relative;
+  display: none;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px;
+  margin-top: -100px;
+  z-index: 0;
+  text-align: center;
+}
+main .container .projects .projects-main .wrapper .tags .WordPress {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: mediumseagreen;
+}
+main .container .projects .projects-main .wrapper .tags .html {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b33c4e;
+}
+main .container .projects .projects-main .wrapper .tags .css {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #3c8fb3;
+}
+main .container .projects .projects-main .wrapper .tags .scss {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b3783c;
+}
+main .container .projects .projects-main .wrapper .tags .php {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #723cb3;
+}
+main .container .projects .projects-main .wrapper .tags .laravel {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b3b13c;
 }
 main .container .projects .projects-main .wrapper .demo-button {
   display: none;
@@ -239,7 +281,6 @@ main .container .projects .projects-main .wrapper .demo-button {
   padding: 10px;
   border: 2px solid black;
   background-color: black;
-  color: white;
   text-decoration: none;
   border-radius: 25px;
 }
@@ -319,9 +360,6 @@ footer .footer .socials ul li a img {
   }
   main .container .header-hero .picture-hero {
     display: none;
-  }
-  .projects-main {
-    flex-direction: column;
   }
 }
 

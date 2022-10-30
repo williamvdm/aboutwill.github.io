@@ -1,4 +1,19 @@
 @import "font";
+//colors
+
+$white: white;
+$black: black;
+$purple: #cf59e6;
+$blue: #6bc5f8;
+
+//mixin for tags
+@mixin tags {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: $white;
+}
 
 body {
   margin: 0 auto;
@@ -23,11 +38,12 @@ h2 {
 
 }
 
-
+//header content//
 header {
   position: fixed;
   width: 100%;
   margin-top: -90px;
+
   .navigation {
     display: flex;
     align-self: center;
@@ -40,7 +56,7 @@ header {
     margin: 25px auto;
     border-radius: 50px;
     border: 1.5px solid #efefefef;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(33px);
     background-blend-mode: overlay;
 
@@ -91,6 +107,7 @@ header {
   }
 }
 
+//Main content//
 main {
   .container {
     width: 40vw;
@@ -108,7 +125,7 @@ main {
         font-family: 'Open Sauce One Regular', sans-serif;
 
         .title-hero-special {
-          background: linear-gradient(to right, #6bc5f8 20%, #cf59e6 40%, #cf59e6 60%, #6bc5f8 80%);
+          background: linear-gradient(to right, $blue 20%, $purple 40%, $purple 60%, $blue 80%);
           background-size: 200% auto;
           color: #000;
           background-clip: unset;
@@ -158,7 +175,8 @@ main {
       margin-top: 100px;
 
       h2 {
-        margin-top: 100px;
+        //margin-top: 100px;
+        text-align: center;
       }
 
       .projects-main {
@@ -183,7 +201,8 @@ main {
             position: relative;
             text-align: center;
             padding: 5px;
-            font-weight: bold;
+            margin: 0px auto 10px auto;
+            font-size: 24px;
           }
 
           .background {
@@ -192,7 +211,7 @@ main {
           }
 
           &:hover > .background {
-            filter: blur(5px);
+            filter: grayscale(90%) blur(1px);
             transition: .4s ease-in-out;
           }
 
@@ -202,7 +221,53 @@ main {
             display: flex;
             z-index: 0;
             text-align: center;
+            color: $white;
             transition: .4s ease-in-out;
+          }
+
+          &:hover > .tags {
+            display: flex;
+          }
+
+          .tags {
+            position: relative;
+            display: none;
+            justify-content: center;
+            flex-direction: row;
+            padding: 10px;
+            margin-top: -100px;
+            z-index: 0;
+            text-align: center;
+
+            .WordPress {
+              @include tags;
+              background: mediumseagreen;
+            }
+
+            .html {
+              @include tags;
+              background: #b33c4e;
+            }
+
+            .css {
+              @include tags;
+              background: #3c8fb3;
+            }
+
+            .scss {
+              @include tags;
+              background: #b3783c;
+            }
+
+            .php {
+              @include tags;
+              background: #723cb3;
+            }
+
+            .laravel {
+              @include tags;
+              background: #b3b13c;
+            }
           }
 
           .demo-button {
@@ -212,9 +277,8 @@ main {
             margin: 0 auto;
             width: calc(100% / 3);
             padding: 10px;
-            border: 2px solid black;
-            background-color: black;
-            color: white;
+            border: 2px solid $black;
+            background-color: $black;
             text-decoration: none;
             border-radius: 25px;
           }
@@ -224,6 +288,7 @@ main {
   }
 }
 
+//Footer content//
 footer {
   margin-top: 300px;
 
@@ -255,6 +320,7 @@ footer {
   }
 }
 
+//Gradient animation//
 @keyframes move {
   to {
     background-position: 200% center;
