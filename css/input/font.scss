@@ -1,9 +1,19 @@
 @font-face {
-  font-family: Helvetica;
-  src: url("/font/helvetica.ttf");
+  font-family: 'Open Sauce One Regular';
+  src: url("../../font/osor.ttf");
 }
 
 @font-face {
-  font-family: Helvetica Bold;
-  src: url("/font/helveticabold.ttf");
+  font-family: 'Open Sauce One Light';
+  src: url("../../font/osol.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sauce One Italic';
+  src: url("../../font/osoi.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sauce One Bold';
+  src: url("../../font/osob.ttf");
 }
