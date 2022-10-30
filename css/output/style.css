@@ -100,6 +100,7 @@ main .container {
   width: 40vw;
   min-width: 1000px;
   margin: 100px auto;
+  padding-top: 100px;
 }
 main .container .header-hero {
   display: flex;
@@ -297,6 +298,7 @@ footer .footer .socials ul li a img {
   main .container {
     width: 90%;
     min-width: 0px;
+    padding-top: 0px;
   }
   main .container .header-hero {
     flex-direction: column;
