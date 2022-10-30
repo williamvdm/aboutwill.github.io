@@ -272,6 +272,9 @@ footer .footer .socials ul li a img {
   }
 }
 @media screen and (max-width: 600px) {
+  .button {
+    margin: 20px auto;
+  }
   body {
     width: 100%;
   }
@@ -305,6 +308,7 @@ footer .footer .socials ul li a img {
   }
   main .container .header-hero .title-hero {
     float: none;
+    text-align: center;
   }
   main .container .header-hero .picture-hero-mobile {
     display: flex;

@@ -1,5 +1,8 @@
 @media screen and (max-width: 600px) {
 
+  .button {
+    margin: 20px auto;
+  }
   body {
     width: 100%;
   }
@@ -36,6 +39,7 @@
       flex-direction: column;
       .title-hero {
         float: none;
+        text-align: center;
       }
       .picture-hero-mobile {
         display: flex;
