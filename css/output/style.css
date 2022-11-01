@@ -401,7 +401,7 @@ footer .footer .socials ul li:hover {
   main .container {
     width: 90%;
     min-width: 0px;
-    padding-top: 60px;
+    padding-top: 0px;
   }
   main .container .header-hero {
     flex-direction: column;
