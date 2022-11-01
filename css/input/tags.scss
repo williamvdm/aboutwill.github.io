@@ -14,7 +14,7 @@
 
   .wordpress {
     @include tags;
-    background: mediumseagreen;
+    background: #82abda;
   }
 
   .html {
@@ -45,5 +45,10 @@
   .javascript {
     @include tags;
     background: #b36e3c;
+  }
+
+  .vue {
+    @include tags;
+    background: #42af66;
   }
 }

@@ -157,7 +157,7 @@ header .navigation .nav-menu li a {
   margin: 5px;
   border-radius: 5px;
   color: white;
-  background: mediumseagreen;
+  background: #82abda;
 }
 .tags .html {
   text-align: center;
@@ -206,6 +206,14 @@ header .navigation .nav-menu li a {
   border-radius: 5px;
   color: white;
   background: #b36e3c;
+}
+.tags .vue {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #42af66;
 }
 
 main .container {
