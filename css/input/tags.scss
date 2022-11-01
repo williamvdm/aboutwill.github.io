@@ -7,6 +7,11 @@
 }
 
 .tags {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   .wordpress {
     @include tags;
     background: mediumseagreen;
@@ -35,5 +40,10 @@
   .laravel {
     @include tags;
     background: #b3b13c;
+  }
+
+  .javascript {
+    @include tags;
+    background: #b36e3c;
   }
 }

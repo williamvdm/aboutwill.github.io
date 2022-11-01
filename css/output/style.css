@@ -145,6 +145,12 @@ header .navigation .nav-menu li a {
   font-family: "Open Sauce One Bold";
   src: url("../../font/osob.ttf");
 }
+.tags {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .tags .wordpress {
   text-align: center;
   padding: 5px;
@@ -192,6 +198,14 @@ header .navigation .nav-menu li a {
   border-radius: 5px;
   color: white;
   background: #b3b13c;
+}
+.tags .javascript {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b36e3c;
 }
 
 main .container {
@@ -267,7 +281,7 @@ main .container .projects .projects-wrapper .projects-work {
 main .container .projects .projects-wrapper .projects-work .project-thumbnail {
   flex: 1;
   width: 100%;
-  height: 24rem;
+  height: 35rem;
   margin: 20px;
   border-radius: 20px;
   padding: 20px;
@@ -286,13 +300,16 @@ main .container .projects .projects-wrapper .projects-work .project-thumbnail:ho
 }
 main .container .projects .projects-wrapper .projects-work .project-thumbnail .thumbnail-content {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 main .container .projects .projects-wrapper .projects-work .project-thumbnail .thumbnail-content .project-title {
   text-align: center;
   font-family: "Open Sauce One Bold";
+}
+main .container .projects .projects-wrapper .projects-work .project-thumbnail .thumbnail-content .description {
+  font-size: 14px;
+  text-align: center;
 }
 main .container .projects .projects-wrapper .projects-work .project-thumbnail > img {
   border-radius: 25px;
