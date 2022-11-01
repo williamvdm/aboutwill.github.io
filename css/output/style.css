@@ -14,32 +14,62 @@
   font-family: "Open Sauce One Bold";
   src: url("../../font/osob.ttf");
 }
+html {
+  background-color: #fdfdfd;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
   font-family: "Open Sauce One Regular", serif;
 }
 
-h2 {
-  font-size: 32px;
-  margin: 0px;
-}
-
 .button {
-  display: flex;
-  justify-content: center;
-  width: 150px;
+  display: block;
   margin-top: 30px;
+  border-radius: 30px;
   padding: 15px;
-  background-color: black;
-  color: white;
   text-decoration: none;
-  border-radius: 25px;
+  text-align: center;
+  background-color: #333333;
+  color: white;
+  width: 200px;
+  font-size: 14px;
 }
 
+.button-demo {
+  display: block;
+  margin: 10px auto;
+  border-radius: 30px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: #333333;
+  font-size: 14px;
+  justify-self: flex-end;
+}
+
+@font-face {
+  font-family: "Open Sauce One Regular";
+  src: url("../../font/osor.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Light";
+  src: url("../../font/osol.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Italic";
+  src: url("../../font/osoi.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Bold";
+  src: url("../../font/osob.ttf");
+}
 header {
   position: fixed;
+  z-index: 1000;
   width: 100%;
-  margin-top: -90px;
+  margin-top: -100px;
 }
 header .navigation {
   display: flex;
@@ -53,9 +83,8 @@ header .navigation {
   margin: 25px auto;
   border-radius: 50px;
   border: 1.5px solid rgba(239, 239, 239, 0.937254902);
-  color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(33px);
-  background-blend-mode: overlay;
+  background-color: white;
+  box-shadow: 0px 33.36px 93.5859px rgba(62, 71, 91, 0.11), 0px 8.896px 140.379px rgba(97, 109, 135, 0.1);
 }
 header .navigation .circle {
   display: flex;
@@ -96,6 +125,71 @@ header .navigation .nav-menu li .active {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Open Sauce One Regular";
+  src: url("../../font/osor.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Light";
+  src: url("../../font/osol.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Italic";
+  src: url("../../font/osoi.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Bold";
+  src: url("../../font/osob.ttf");
+}
+.tags .wordpress {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: mediumseagreen;
+}
+.tags .html {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b33c4e;
+}
+.tags .css {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #3c8fb3;
+}
+.tags .scss {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b3783c;
+}
+.tags .php {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #723cb3;
+}
+.tags .laravel {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #b3b13c;
+}
+
 main .container {
   width: 40vw;
   min-width: 1000px;
@@ -116,7 +210,6 @@ main .container .header-hero .title-hero .title-hero-special {
   background-size: 200% auto;
   color: #000;
   background-clip: unset;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: move 2s linear infinite;
@@ -130,11 +223,11 @@ main .container .header-hero .title-hero .title-hand {
 }
 main .container .header-hero .title-hero h1 {
   font-size: 48px;
-  margin: 0px 0px 10px 0px;
+  margin: 0 0 10px 0;
 }
 main .container .header-hero .title-hero h2 {
   font-size: 32px;
-  margin: 0px;
+  margin: 0;
 }
 main .container .header-hero .picture-hero-mobile {
   display: none;
@@ -142,7 +235,7 @@ main .container .header-hero .picture-hero-mobile {
 main .container .header-hero .picture-hero {
   float: right;
   width: 250px;
-  margin: 0 auto;
+  margin: 0 -10px;
   padding: 15px;
   border-radius: 100%;
 }
@@ -156,135 +249,70 @@ main .container .projects {
 main .container .projects h2 {
   text-align: center;
 }
-main .container .projects .projects-main {
+main .container .projects .projects-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+main .container .projects .projects-wrapper .projects-work {
   display: flex;
   flex-direction: row;
-}
-main .container .projects .projects-main .wrapper {
-  position: relative;
-  justify-items: center;
   justify-content: center;
-  height: 300px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  flex-grow: 1;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .container .projects .projects-wrapper .projects-work .project-thumbnail {
   flex: 1;
-  margin-left: 10px;
-  transition: all 0.2s ease-in-out;
-}
-main .container .projects .projects-main .wrapper .one {
-  background: url("../../assets/images/project-ftsf.jpg");
-  background-size: cover;
   width: 100%;
-  height: 300px;
-  transition: all 0.2s ease-in-out;
-}
-main .container .projects .projects-main .wrapper .two {
-  border: 1px solid rgba(239, 239, 239, 0.937254902);
-  background: url("../../assets/images/project-competa.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 300px;
-  transition: all 0.2s ease-in-out;
-}
-main .container .projects .projects-main .wrapper .item-title {
-  position: relative;
-  text-align: center;
-  padding: 5px;
-  margin: 0px auto 10px auto;
-  font-size: 24px;
-}
-main .container .projects .projects-main .wrapper .background {
-  border-radius: 25px;
-}
-main .container .projects .projects-main .wrapper:hover > .background {
-  filter: grayscale(90%) blur(1px);
+  height: 24rem;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 50px -19px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 50px -19px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 50px -19px rgba(0, 0, 0, 0.1);
   transition: 0.4s ease-in-out;
 }
-main .container .projects .projects-main .wrapper:hover > .demo-button {
-  position: relative;
-  margin-top: -100px;
-  display: flex;
-  z-index: 0;
-  text-align: center;
-  color: white;
+main .container .projects .projects-wrapper .projects-work .project-thumbnail:hover {
+  scale: 105%;
+  -webkit-box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.1);
   transition: 0.4s ease-in-out;
 }
-main .container .projects .projects-main .wrapper:hover > .tags {
+main .container .projects .projects-wrapper .projects-work .project-thumbnail .thumbnail-content {
   display: flex;
-}
-main .container .projects .projects-main .wrapper .tags {
-  position: relative;
-  display: none;
   justify-content: center;
-  flex-direction: row;
-  padding: 10px;
-  margin-top: -100px;
-  z-index: 0;
-  text-align: center;
+  align-items: center;
+  flex-direction: column;
 }
-main .container .projects .projects-main .wrapper .tags .WordPress {
+main .container .projects .projects-wrapper .projects-work .project-thumbnail .thumbnail-content .project-title {
   text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  background: mediumseagreen;
+  font-family: "Open Sauce One Bold";
 }
-main .container .projects .projects-main .wrapper .tags .html {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  background: #b33c4e;
-}
-main .container .projects .projects-main .wrapper .tags .css {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  background: #3c8fb3;
-}
-main .container .projects .projects-main .wrapper .tags .scss {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  background: #b3783c;
-}
-main .container .projects .projects-main .wrapper .tags .php {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  background: #723cb3;
-}
-main .container .projects .projects-main .wrapper .tags .laravel {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  background: #b3b13c;
-}
-main .container .projects .projects-main .wrapper .demo-button {
-  display: none;
-  justify-content: center;
-  justify-self: center;
-  margin: 0 auto;
-  width: 33.3333333333%;
-  padding: 10px;
-  border: 2px solid black;
-  background-color: black;
-  text-decoration: none;
+main .container .projects .projects-wrapper .projects-work .project-thumbnail > img {
   border-radius: 25px;
+  width: 100%;
+  height: 237px;
+  object-fit: cover;
 }
 
+@font-face {
+  font-family: "Open Sauce One Regular";
+  src: url("../../font/osor.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Light";
+  src: url("../../font/osol.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Italic";
+  src: url("../../font/osoi.ttf");
+}
+@font-face {
+  font-family: "Open Sauce One Bold";
+  src: url("../../font/osob.ttf");
+}
 footer {
   margin-top: 300px;
 }
@@ -297,14 +325,31 @@ footer .footer h3 {
   text-align: center;
 }
 footer .footer .socials {
-  display: inline;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+footer .footer .socials ul {
+  padding: 0;
+  list-style-type: none;
 }
 footer .footer .socials ul li {
-  display: inline-block;
+  margin: 5px;
 }
-footer .footer .socials ul li a img {
-  width: 2em;
+footer .footer .socials ul li .hireme {
+  background-color: #333333;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 25px;
+}
+footer .footer .socials ul li .socials-icon > img {
+  width: 40px;
+}
+footer .footer .socials ul li:hover {
+  scale: 105%;
 }
 
 @keyframes move {
@@ -319,12 +364,9 @@ footer .footer .socials ul li a img {
   body {
     width: 100%;
   }
-  header {
-    width: 100%;
-  }
   header .navigation {
     width: 90%;
-    min-width: 0px;
+    min-width: 0;
   }
   header .navigation .nav-mobile {
     display: flex;
@@ -335,9 +377,50 @@ footer .footer .socials ul li a img {
   header .navigation .nav-mobile a {
     text-decoration: none;
     font-size: 24px;
+    color: black;
   }
   header .navigation .nav-menu {
     display: none;
+  }
+  main .container {
+    width: 90%;
+    min-width: 0px;
+    padding-top: 60px;
+  }
+  main .container .header-hero {
+    flex-direction: column;
+  }
+  main .container .header-hero .title-hero {
+    float: none;
+    text-align: center;
+  }
+  main .container .header-hero .picture-hero-mobile {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 100%;
+  }
+  main .container .header-hero .picture-hero {
+    display: none;
+  }
+  main .projects .projects-work {
+    flex-direction: column !important;
+    width: 80%;
+  }
+  main .projects .projects-work .thumbnail-image {
+    border-radius: 0px;
+    width: 100px;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  header .navigation {
+    width: 90%;
+    min-width: 100px;
+  }
+  .button {
+    margin: 20px auto;
   }
   main .container {
     width: 90%;

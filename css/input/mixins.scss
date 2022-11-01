@@ -1,0 +1,42 @@
+@mixin tags {
+  .tags {
+    position: relative;
+    display: none;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    margin-top: -100px;
+    z-index: 0;
+    text-align: center;
+
+    .WordPress {
+      @include tags;
+      background: mediumseagreen;
+    }
+
+    .html {
+      @include tags;
+      background: #b33c4e;
+    }
+
+    .css {
+      @include tags;
+      background: #3c8fb3;
+    }
+
+    .scss {
+      @include tags;
+      background: #b3783c;
+    }
+
+    .php {
+      @include tags;
+      background: #723cb3;
+    }
+
+    .laravel {
+      @include tags;
+      background: #b3b13c;
+    }
+  }
+}

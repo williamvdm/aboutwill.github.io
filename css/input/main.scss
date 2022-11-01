@@ -1,324 +1,48 @@
 @import "font";
-//colors
+@import "colors";
 
-$white: white;
-$black: black;
-$purple: #cf59e6;
-$blue: #6bc5f8;
-
-//mixin for tags
-@mixin tags {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  color: $white;
+html {
+  background-color: #fdfdfd;
+  scroll-behavior: smooth;
 }
-
 body {
   margin: 0 auto;
   font-family: 'Open Sauce One Regular', serif;
 }
 
-h2 {
-  font-size: 32px;
-  margin: 0px;
+.button {
+  display: block;
+  margin-top: 30px;
+  border-radius: 30px;
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+  background-color: $dark-font;
+  color: $white;
+  width: 200px;
+  font-size: 14px;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  width: 150px;
-  margin-top: 30px;
-  padding: 15px;
-  background-color: black;
-  color: white;
+.button-demo {
+  display: block;
+  margin: 10px auto;
+  border-radius: 30px;
+  padding: 10px;
   text-decoration: none;
-  border-radius: 25px;
-
+  text-align: center;
+  color: $dark-font;
+  font-size: 14px;
+  justify-self: flex-end;
 }
 
 //header content//
-header {
-  position: fixed;
-  width: 100%;
-  margin-top: -90px;
-
-  .navigation {
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    width: 35vw;
-    min-width: 1000px;
-    padding: 5px;
-    margin: 25px auto;
-    border-radius: 50px;
-    border: 1.5px solid #efefefef;
-    color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(33px);
-    background-blend-mode: overlay;
-
-    .circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 5px;
-      margin-left: 20px;
-      background: linear-gradient(to right, #6bc5f8 20%, #cf59e6 40%, #cf59e6 60%, #6bc5f8 80%);
-      background-size: 200% auto;
-      animation: move 2s linear infinite;
-
-      .main-logo {
-        font-weight: bold;
-        color: white;
-      }
-    }
-
-    .nav-mobile {
-      display: none;
-    }
-
-    .nav-menu {
-      display: flex;
-      justify-self: right;
-      margin: 0px;
-      list-style-type: none;
-
-      li {
-        display: inline-block;
-        margin-right: 40px;
-
-        a {
-          color: #727272;
-          text-decoration: none;
-          font-size: 14px;
-        }
-
-        .active {
-          color: black;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-}
+@import "header";
 
 //Main content//
-main {
-  .container {
-    width: 40vw;
-    min-width: 1000px;
-    margin: 100px auto;
-    padding-top: 100px;
-
-    .header-hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .title-hero {
-        float: left;
-        font-family: 'Open Sauce One Regular', sans-serif;
-
-        .title-hero-special {
-          background: linear-gradient(to right, $blue 20%, $purple 40%, $purple 60%, $blue 80%);
-          background-size: 200% auto;
-          color: #000;
-          background-clip: unset;
-          text-fill-color: transparent;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: move 2s linear infinite;
-        }
-
-        .title-hand {
-          position: absolute;
-          display: block;
-          font-size: 72px;
-          margin-top: 25px;
-          margin-left: -120px;
-        }
-
-        h1 {
-          font-size: 48px;
-          margin: 0px 0px 10px 0px;
-        }
-
-        h2 {
-          font-size: 32px;
-          margin: 0px;
-        }
-      }
-
-      .picture-hero-mobile {
-        display: none;
-      }
-
-      .picture-hero {
-        float: right;
-        width: 250px;
-        margin: 0 auto;
-        padding: 15px;
-        border-radius: 100%;
-      }
-    }
-
-    .projects {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      width: 100%;
-      margin-top: 100px;
-
-      h2 {
-        //margin-top: 100px;
-        text-align: center;
-      }
-
-      .projects-main {
-        display: flex;
-        flex-direction: row;
-
-        .wrapper {
-          position: relative;
-          justify-items: center;
-          justify-content: center;
-          height: 300px;
-          margin-top: 20px;
-          margin-bottom: 20px;
-          padding: 20px;
-          flex-grow: 1;
-          flex: 1;
-          margin-left: 10px;
-          transition: all .2s ease-in-out;
-          @import "items";
-
-          .item-title {
-            position: relative;
-            text-align: center;
-            padding: 5px;
-            margin: 0px auto 10px auto;
-            font-size: 24px;
-          }
-
-          .background {
-            border-radius: 25px;
-
-          }
-
-          &:hover > .background {
-            filter: grayscale(90%) blur(1px);
-            transition: .4s ease-in-out;
-          }
-
-          &:hover > .demo-button {
-            position: relative;
-            margin-top: -100px;
-            display: flex;
-            z-index: 0;
-            text-align: center;
-            color: $white;
-            transition: .4s ease-in-out;
-          }
-
-          &:hover > .tags {
-            display: flex;
-          }
-
-          .tags {
-            position: relative;
-            display: none;
-            justify-content: center;
-            flex-direction: row;
-            padding: 10px;
-            margin-top: -100px;
-            z-index: 0;
-            text-align: center;
-
-            .WordPress {
-              @include tags;
-              background: mediumseagreen;
-            }
-
-            .html {
-              @include tags;
-              background: #b33c4e;
-            }
-
-            .css {
-              @include tags;
-              background: #3c8fb3;
-            }
-
-            .scss {
-              @include tags;
-              background: #b3783c;
-            }
-
-            .php {
-              @include tags;
-              background: #723cb3;
-            }
-
-            .laravel {
-              @include tags;
-              background: #b3b13c;
-            }
-          }
-
-          .demo-button {
-            display: none;
-            justify-content: center;
-            justify-self: center;
-            margin: 0 auto;
-            width: calc(100% / 3);
-            padding: 10px;
-            border: 2px solid $black;
-            background-color: $black;
-            text-decoration: none;
-            border-radius: 25px;
-          }
-        }
-      }
-    }
-  }
-}
+@import "content";
 
 //Footer content//
-footer {
-  margin-top: 300px;
-
-  .footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    h3 {
-      text-align: center;
-    }
-
-    .socials {
-      display: inline;
-      text-align: center;
-
-      ul {
-        li {
-          display: inline-block;
-
-          a {
-            img {
-              width: 2em;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+@import "footer";
 
 //Gradient animation//
 @keyframes move {
@@ -327,4 +51,5 @@ footer {
   }
 }
 
+//Mobile responsive//
 @import "mobile";

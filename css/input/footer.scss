@@ -1,0 +1,50 @@
+@import "font";
+@import "mixins";
+@import "colors";
+
+footer {
+  margin-top: 300px;
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      text-align: center;
+    }
+
+    .socials {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+      ul {
+        padding: 0;
+        list-style-type: none;
+
+        li {
+          margin: 5px;
+
+          .hireme {
+            background-color: $dark-font;
+            color: $white;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 25px;
+          }
+
+          .socials-icon > img {
+            width: 40px;
+
+          }
+          &:hover {
+            scale: 105%;
+          }
+        }
+      }
+    }
+  }
+}

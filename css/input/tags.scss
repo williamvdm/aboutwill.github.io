@@ -1,0 +1,39 @@
+@mixin tags {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: $white;
+}
+
+.tags {
+  .wordpress {
+    @include tags;
+    background: mediumseagreen;
+  }
+
+  .html {
+    @include tags;
+    background: #b33c4e;
+  }
+
+  .css {
+    @include tags;
+    background: #3c8fb3;
+  }
+
+  .scss {
+    @include tags;
+    background: #b3783c;
+  }
+
+  .php {
+    @include tags;
+    background: #723cb3;
+  }
+
+  .laravel {
+    @include tags;
+    background: #b3b13c;
+  }
+}

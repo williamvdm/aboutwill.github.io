@@ -1,36 +1,85 @@
+@import "colors";
+
 @media screen and (max-width: 600px) {
 
   .button {
     margin: 20px auto;
   }
+
   body {
     width: 100%;
   }
-  header {
-    width: 100%;
-    .navigation {
-      width: 90%;
-      min-width: 0px;
+  header .navigation {
+    width: 90%;
+    min-width: 0;
 
-      .nav-mobile {
-        display: flex;
-        justify-self: right;
-        margin: 20px;
-        list-style-type: none;
-        a {
-          text-decoration: none;
-          font-size: 24px;
-        }
+    .nav-mobile {
+      display: flex;
+      justify-self: right;
+      margin: 20px;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        font-size: 24px;
+        color: black;
       }
+    }
 
-      .nav-menu {
-        display: none;
-
-      }
+    .nav-menu {
+      display: none;
 
     }
   }
 
+  main .container {
+    width: 90%;
+    min-width: 0px;
+    padding-top: 60px;
+
+    .header-hero {
+      flex-direction: column;
+      .title-hero {
+        float: none;
+        text-align: center;
+      }
+      .picture-hero-mobile {
+        display: flex;
+        width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 100%;
+      }
+      .picture-hero {
+        display: none;
+      }
+    }
+  }
+
+  main .projects {
+    .projects-work {
+      flex-direction: column !important;
+      width: 80%;
+
+      .thumbnail-image {
+        border-radius: 0px;
+        width: 100px;
+        object-fit: cover;
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  header .navigation {
+    width: 90%;
+    min-width: 100px;
+
+  }
+
+  .button {
+    margin: 20px auto;
+  }
   main .container {
     width: 90%;
     min-width: 0px;
@@ -54,12 +103,4 @@
       }
     }
   }
-
-  main .projects {
-    
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1000px) {
-
 }
