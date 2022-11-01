@@ -348,23 +348,17 @@ footer .footer h3 {
 footer .footer .socials {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex: 1;
   margin: auto;
 }
 footer .footer .socials ul {
+  display: flex;
+  flex-direction: row;
   padding: 0;
   list-style-type: none;
 }
 footer .footer .socials ul li {
   margin: 5px;
-}
-footer .footer .socials ul li .hireme {
-  background-color: #333333;
-  color: white;
-  font-size: 14px;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 25px;
 }
 footer .footer .socials ul li .socials-icon > img {
   width: 40px;
@@ -380,7 +374,7 @@ footer .footer .socials ul li:hover {
 }
 @media screen and (max-width: 600px) {
   .button {
-    margin: 50px auto;
+    margin: 50px auto 0px auto;
   }
   body {
     width: 100%;

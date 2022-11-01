@@ -17,24 +17,17 @@ footer {
     .socials {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex: 1;
       margin: auto;
 
       ul {
+        display: flex;
+        flex-direction: row;
         padding: 0;
         list-style-type: none;
 
         li {
           margin: 5px;
-
-          .hireme {
-            background-color: $dark-font;
-            color: $white;
-            font-size: 14px;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 25px;
-          }
 
           .socials-icon > img {
             width: 40px;
