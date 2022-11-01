@@ -76,6 +76,7 @@ header .navigation {
   align-self: center;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 40px;
   width: 35vw;
   min-width: 1000px;
@@ -102,8 +103,15 @@ header .navigation .circle .main-logo {
   font-weight: bold;
   color: white;
 }
-header .navigation .nav-mobile {
+header .navigation .hamburger {
   display: none;
+  justify-self: right;
+  margin-right: 15px;
+  background-color: transparent;
+  color: #333333;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
 }
 header .navigation .nav-menu {
   display: flex;
@@ -119,10 +127,6 @@ header .navigation .nav-menu li a {
   color: #727272;
   text-decoration: none;
   font-size: 14px;
-}
-header .navigation .nav-menu li .active {
-  color: black;
-  font-weight: bold;
 }
 
 @font-face {
@@ -367,19 +371,31 @@ footer .footer .socials ul li:hover {
   header .navigation {
     width: 90%;
     min-width: 0;
+    position: relative;
   }
-  header .navigation .nav-mobile {
+  header .navigation .hamburger {
     display: flex;
-    justify-self: right;
-    margin: 20px;
-    list-style-type: none;
-  }
-  header .navigation .nav-mobile a {
-    text-decoration: none;
-    font-size: 24px;
-    color: black;
+    position: relative;
   }
   header .navigation .nav-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 70%;
+    justify-self: right;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+  }
+  header .navigation .nav-menu li {
+    padding: 10px;
+    margin: 10px;
+  }
+  header .navigation .nav-menu.show {
+    display: flex;
+  }
+  header .navigation .nav-menu.hide {
     display: none;
   }
   main .container {

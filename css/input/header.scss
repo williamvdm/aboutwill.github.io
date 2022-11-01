@@ -13,6 +13,7 @@ header {
     align-self: center;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     height: 40px;
     width: 35vw;
     min-width: 1000px;
@@ -41,8 +42,15 @@ header {
       }
     }
 
-    .nav-mobile {
+    .hamburger {
       display: none;
+      justify-self: right;
+      margin-right: 15px;
+      background-color: transparent;
+      color: $dark-font;
+      border: 0;
+      font-size: 20px;
+      cursor: pointer;
     }
 
     .nav-menu {
@@ -59,11 +67,6 @@ header {
           color: #727272;
           text-decoration: none;
           font-size: 14px;
-        }
-
-        .active {
-          color: black;
-          font-weight: bold;
         }
       }
     }

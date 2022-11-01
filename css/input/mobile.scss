@@ -12,20 +12,36 @@
   header .navigation {
     width: 90%;
     min-width: 0;
+    position: relative;
 
-    .nav-mobile {
+    .hamburger {
       display: flex;
-      justify-self: right;
-      margin: 20px;
-      list-style-type: none;
-      a {
-        text-decoration: none;
-        font-size: 24px;
-        color: black;
-      }
+      position: relative;
+
     }
 
     .nav-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 70%;
+      justify-self: right;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 5px;
+        li {
+          padding: 10px;
+          margin: 10px;
+        }
+      }
+
+    .nav-menu.show {
+      display: flex;
+
+    }
+
+    .nav-menu.hide {
       display: none;
 
     }

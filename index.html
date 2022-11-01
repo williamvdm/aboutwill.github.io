@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="css/output/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <header>
@@ -14,7 +13,8 @@
         <div class="circle">
             <div class="main-logo">W</div>
         </div>
-        <ul class="nav-menu">
+        <button class="hamburger" id="hamburger"> ☰ </button>
+        <ul class="nav-menu" id="nav-menu">
             <li>
                 <a href="#">Home</a>
             </li>
@@ -24,12 +24,6 @@
             <li>
                 <a href="#footer">Contact</a>
             </li>
-        </ul>
-        <ul class="nav-mobile">
-            <li>
-                <a href="#container" class="active"> ☰ </a>
-            </li>
-
         </ul>
     </div>
 </header>
@@ -108,4 +102,5 @@
     </div>
 </footer>
 </body>
+<script src="js/menu.js"></script>
 </html>
